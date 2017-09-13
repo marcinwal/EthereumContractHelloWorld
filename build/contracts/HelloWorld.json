@@ -4,6 +4,19 @@
     {
       "constant": true,
       "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
       "name": "balance",
       "outputs": [
         {
@@ -18,17 +31,12 @@
       "constant": false,
       "inputs": [
         {
-          "name": "_value",
+          "name": "val",
           "type": "uint256"
         }
       ],
-      "name": "deposit",
-      "outputs": [
-        {
-          "name": "_newValue",
-          "type": "uint256"
-        }
-      ],
+      "name": "setBalance",
+      "outputs": [],
       "payable": false,
       "type": "function"
     },
@@ -36,9 +44,21 @@
       "inputs": [],
       "payable": false,
       "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "val",
+          "type": "uint256"
+        }
+      ],
+      "name": "BalanceSet",
+      "type": "event"
     }
   ],
-  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6103e86000555b5b60cf806100266000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b69ef8a881146046578063b6b55f25146068575b600080fd5b3415605057600080fd5b6056608d565b60405190815260200160405180910390f35b3415607257600080fd5b60566004356093565b60405190815260200160405180910390f35b60005481565b600080548201908190555b9190505600a165627a7a72305820bac8b898948335c9f25c80d574b64c4d2f2fbd88665cab7f8427091e58c4c12e0029",
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6103e86000555b5b61011e806100276000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166312065fe081146050578063b69ef8a8146072578063fb1669ca146094575b600080fd5b3415605a57600080fd5b606060a9565b60405190815260200160405180910390f35b3415607c57600080fd5b606060b0565b60405190815260200160405180910390f35b3415609e57600080fd5b60a760043560b6565b005b6000545b90565b60005481565b60008190557fb7d09e3923efbf6076b5636dd4a61388264e57a5f3161976dbc8a92615f6b9d78160405190815260200160405180910390a15b505600a165627a7a723058205985c8b49034c8ec9d32d6f4af3120898cbffb52f4ffd10f3aac601e5790f4290029",
   "networks": {
     "1505313942665": {
       "events": {},
@@ -54,5 +74,5 @@
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1505317722409
+  "updated_at": 1505320622327
 }

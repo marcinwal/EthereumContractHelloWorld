@@ -5,8 +5,13 @@ contract HelloWorld {
         balance = 1000;
     }
 
-    function deposit(uint _value) returns(uint _newValue){
-        balance += _value;
+    event BalanceSet(uint val);
+
+    function setBalance(uint val) {
+        balance = val;
+        BalanceSet(balance);
+    }
+    function getBalance() constant returns (uint) {
         return balance;
     }
 }
