@@ -4,11 +4,11 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "getBalance",
+      "name": "owner",
       "outputs": [
         {
           "name": "",
-          "type": "uint256"
+          "type": "address"
         }
       ],
       "payable": false,
@@ -18,38 +18,39 @@
       "constant": false,
       "inputs": [
         {
-          "name": "val",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_val",
           "type": "uint256"
         }
       ],
-      "name": "changeBalance",
-      "outputs": [],
+      "name": "transfer",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
       "payable": false,
       "type": "function"
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "balance",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "type": "function"
-    },
-    {
-      "constant": false,
       "inputs": [
         {
-          "name": "val",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "_balance",
           "type": "uint256"
         }
       ],
-      "name": "setBalance",
-      "outputs": [],
       "payable": false,
       "type": "function"
     },
@@ -57,21 +58,9 @@
       "inputs": [],
       "payable": false,
       "type": "constructor"
-    },
-    {
-      "anonymous": false,
-      "inputs": [
-        {
-          "indexed": false,
-          "name": "val",
-          "type": "uint256"
-        }
-      ],
-      "name": "BalanceSet",
-      "type": "event"
     }
   ],
-  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6103e86000555b5b61018e806100276000396000f300606060405263ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166312065fe0811461005e5780636833a77c14610083578063b69ef8a81461009b578063fb1669ca146100c0575b600080fd5b341561006957600080fd5b6100716100d8565b60405190815260200160405180910390f35b341561008e57600080fd5b6100996004356100df565b005b34156100a657600080fd5b610071610120565b60405190815260200160405180910390f35b34156100cb57600080fd5b610099600435610126565b005b6000545b90565b600080548201908190557fb7d09e3923efbf6076b5636dd4a61388264e57a5f3161976dbc8a92615f6b9d79060405190815260200160405180910390a15b50565b60005481565b60008190557fb7d09e3923efbf6076b5636dd4a61388264e57a5f3161976dbc8a92615f6b9d78160405190815260200160405180910390a15b505600a165627a7a72305820a8e12bc443b01a3d1d998b95e65d17997a020c2ead8b910ba9cdbacd7082d6ea0029",
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b60008054600160a060020a03191633600160a060020a03908116919091178083551681526001602052604090206103e890555b5b6101a5806100536000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638da5cb5b8114610053578063a9059cbb14610082578063f8b2cb4f146100b8575b600080fd5b341561005e57600080fd5b6100666100e9565b604051600160a060020a03909116815260200160405180910390f35b341561008d57600080fd5b6100a4600160a060020a03600435166024356100f8565b604051901515815260200160405180910390f35b34156100c357600080fd5b6100d7600160a060020a036004351661015a565b60405190815260200160405180910390f35b600054600160a060020a031681565b600160a060020a0333166000908152600160205260408120548290101561012157506000610154565b50600160a060020a0333811660009081526001602081905260408083208054869003905592851682529190208054830190555b92915050565b600160a060020a0381166000908152600160205260409020545b9190505600a165627a7a72305820b8c77facd811e6196fd2ddbe01dd7be86e27ba3e8d10ab6f5fb2154d8c7a1e750029",
   "networks": {
     "1505313942665": {
       "events": {},
@@ -120,10 +109,29 @@
         }
       },
       "links": {},
-      "address": "0xfd5459326e6019fecca833d3ae6e1c1a6b735340",
-      "updated_at": 1505321432823
+      "address": "0x67093cd196ad61140999a6aeca0811f4661cb7af",
+      "updated_at": 1505326681553
+    },
+    "1505327145846": {
+      "events": {
+        "0xb7d09e3923efbf6076b5636dd4a61388264e57a5f3161976dbc8a92615f6b9d7": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "val",
+              "type": "uint256"
+            }
+          ],
+          "name": "BalanceSet",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xeb49155b321201dbc5848d20d99a425c71ee08f7",
+      "updated_at": 1505327487221
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1505321432823
+  "updated_at": 1505327487221
 }
