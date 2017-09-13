@@ -42,6 +42,7 @@ then path to run:
 -----------------
 -----------------
 
+
 truffle compile
 testrpc //to have env running 
 truffle migrate
@@ -56,5 +57,6 @@ var balance0 = web3.eth.getBalance(accounts[0]);
 HelloWorld.deployed(); // to see it exactly
 HelloWorld.deployed().then(function(instance){helloworld=instance})
 helloworld.balance.call()
+helloworld.setBalance(100)
 
 //truffle migrate --reset in case of problems

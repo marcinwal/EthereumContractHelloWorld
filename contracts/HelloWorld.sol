@@ -11,6 +11,12 @@ contract HelloWorld {
         balance = val;
         BalanceSet(balance);
     }
+
+    function changeBalance(uint val) {
+        balance += val;
+        BalanceSet(balance);
+    }
+
     function getBalance() constant returns (uint) {
         return balance;
     }
