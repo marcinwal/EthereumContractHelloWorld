@@ -36,6 +36,8 @@ compiler
 -------
 npm install -g solc
 
+
+
 then path to run:
 -----------------
 -----------------
@@ -48,4 +50,11 @@ modiffy 2_deploy_contracts.js (to add the contract)
 
 
 truffle console //to see it
-HelloWorld.deployed() // to see it exactly
+var accounts  = web3.eth.accounts; //to see the list of accounts:
+var balance0 = web3.eth.getBalance(accounts[0]);
+
+HelloWorld.deployed(); // to see it exactly
+HelloWorld.deployed().then(function(instance){helloworld=instance})
+helloworld.balance.call()
+
+//truffle migrate --reset in case of problems
