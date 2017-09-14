@@ -18,7 +18,7 @@ contract HelloWorld {
 
     function transfer(address _to, uint _val) returns (bool success) {
 
-        if(balances[msg.sender] < _val) {
+        if (balances[msg.sender] < _val) {
             return false;
         }
         balances[msg.sender] -= _val;
