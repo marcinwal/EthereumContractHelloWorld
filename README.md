@@ -56,15 +56,15 @@ then path to run:
 modify 2_deploy_contracts.js (to add the contract)
 
 
->truffle console //to see it
+>truffle console 
+      'to see'
+      'the list of accounts:'
       var accounts  = web3.eth.accounts; 
-      //to see 
-      //the list of accounts:
       var balance0 = web3.eth.getBalance(accounts[0]);
 
       HelloWorld.deployed(); // to see it exactly
-      HelloWorld.deployed().then(function(instance)         {helloworld=instance})
-      helloworld.balance.call()
-      helloworld.setBalance(100)
+      HelloWorld.deployed().then(function(instance)=>         {helloworld=instance});
+      helloworld.balance.call();
+      helloworld.setBalance(100);
 
 >truffle migrate --reset //in case of problems
