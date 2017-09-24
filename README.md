@@ -67,4 +67,4 @@ modify 2_deploy_contracts.js (to add the contract)
       helloworld.balance.call()
       helloworld.setBalance(100)
 
-//truffle migrate --reset in case of problems
+>truffle migrate --reset //in case of problems
