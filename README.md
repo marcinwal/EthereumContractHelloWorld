@@ -9,17 +9,23 @@ geth --datadir "/users/packt/etherum" --networkid 1
       --dev for private network
 
 
-geth account new    //marcinw..
-geth account list 
+>geth account new    //marcinw..
+>geth account list 
+
+>geth --fast --cache 1024 //to download blocks
+>geth --mine --minerthreats=4 //mining with 4 threats
+>geth console
+
 
 etherium mist
 
 
 to install testing env:
 ------------------------
-npm install -g ethereumjs-testrpc
+>npm install -g ethereumjs-testrpc
 
-to run testrpc 
+to run testrpc
+>testrpc 
 
 js:   https://github.com/ethereumjs
 
@@ -29,12 +35,12 @@ https://chriseth.github.io/browser-solidity/#version=soljson-latest.js
 
 truffle - TO START A PROJECT
 -------------
-npm install -g truffle
-truffle init //inside correct folder
+>npm install -g truffle
+>truffle init //inside correct folder
 
 compiler
 -------
-npm install -g solc
+>npm install -g solc
 
 
 
@@ -43,20 +49,20 @@ then path to run:
 -----------------
 
 
-truffle compile
-testrpc //to have env running 
-truffle migrate
+>truffle compile
+>testrpc //to have env running 
+>truffle migrate
 
-modiffy 2_deploy_contracts.js (to add the contract)
+modify 2_deploy_contracts.js (to add the contract)
 
 
-truffle console //to see it
-var accounts  = web3.eth.accounts; //to see the list of accounts:
-var balance0 = web3.eth.getBalance(accounts[0]);
+>truffle console //to see it
+      var accounts  = web3.eth.accounts; //to see the list of accounts:
+      var balance0 = web3.eth.getBalance(accounts[0]);
 
-HelloWorld.deployed(); // to see it exactly
-HelloWorld.deployed().then(function(instance){helloworld=instance})
-helloworld.balance.call()
-helloworld.setBalance(100)
+      HelloWorld.deployed(); // to see it exactly
+      HelloWorld.deployed().then(function(instance)         {helloworld=instance})
+      helloworld.balance.call()
+      helloworld.setBalance(100)
 
 //truffle migrate --reset in case of problems
