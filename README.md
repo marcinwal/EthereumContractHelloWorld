@@ -57,7 +57,9 @@ modify 2_deploy_contracts.js (to add the contract)
 
 
 >truffle console //to see it
-      var accounts  = web3.eth.accounts; //to see the list of accounts:
+      var accounts  = web3.eth.accounts; 
+      //to see 
+      //the list of accounts:
       var balance0 = web3.eth.getBalance(accounts[0]);
 
       HelloWorld.deployed(); // to see it exactly
