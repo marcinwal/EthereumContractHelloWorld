@@ -73,6 +73,7 @@ modify 2_deploy_contracts.js (to add the contract)
 building blockchain projects:
 
 starting geth dev:
+geth --dev account new //settipg up the accouns
 geth --dev --mine unlock 0
 geth attach /var/folders/90/0g4v30_c0000gn/T/geth.ipc ///and place w3 code with data starting with '0x...' !!!!
 
