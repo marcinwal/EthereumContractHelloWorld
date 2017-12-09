@@ -68,3 +68,12 @@ modify 2_deploy_contracts.js (to add the contract)
       helloworld.setBalance(100);
 
 >truffle migrate --reset //in case of problems
+
+-----------------
+building blockchain projects:
+
+starting geth dev:
+geth --dev --mine unlock 0
+geth attach /var/folders/90/0g4v30_c0000gn/T/geth.ipc ///and place w3 code with data starting with '0x...' !!!!
+
+
